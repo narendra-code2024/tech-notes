@@ -1,51 +1,32 @@
+# Technical Handbook
+
+Technical notes: personalized notes on languages, tools, and technologies.
 
 ---
 
-# dev-handbook
+## What's Inside
 
-Personal learning notes and interview prep kit. Backend-leaning (Java / Spring Boot, Node.js) with language-agnostic content on system design, LLD, and behavioral rounds.
-
----
-
-## What's inside
-
-| Folder | What's there |
-|--------|--------------|
-| [`java/`](java/) | Java fundamentals → modern features (8 → 21), OOP, collections, concurrency, streams |
-| [`spring-boot/`](spring-boot/) | Spring Boot from basics to microservices, Kafka, observability, deployment |
-| [`nodejs/`](nodejs/) | Node.js internals (libuv, V8, event loop), Express, MongoDB, auth, building APIs end-to-end. Based on [Namaste Node.js](https://namastedev.com/learn/namaste-node) by Akshay Saini. |
-| [`interview-prep/`](interview-prep/) | 3+ year question banks, LLD / HLD / system design, behavioral and HR. `accenture-java-fullstack/` is consolidated from public LinkedIn posts and YouTube videos by Accenture JFS candidates. |
+| Module | Technical Scope |
+| :--- | :--- |
+| [**Java**](java/) | Core fundamentals, JVM internals, concurrency, and modern features (Java 8–21+). |
+| [**Spring Boot**](spring-boot/) | MVC architecture, JPA/Hibernate, Security, Microservices, and Kafka. |
+| [**Node.js**](nodejs/) | Internals (libuv, V8, event loop), API design, and logical DB modeling. |
 
 ---
 
-## How to use
+## Standards & Quality
 
-**Preparing for a backend interview (3+ yr):**
-Start in [`interview-prep/3-years-experience/`](interview-prep/3-years-experience/). Files are numbered in study priority:
-
-1. Java → Spring Boot → System Design (core technical rounds)
-2. PHP & Laravel (only if your stack uses it)
-3. DevOps → Frontend (awareness-level)
-4. Self Intro, Project & HR (always asked — don't skip)
-
-**Learning Spring Boot end-to-end:**
-[`spring-boot/`](spring-boot/) subfolders are numbered and sequential. Work through `01` to `14`.
-
-**Learning Node.js end-to-end:**
-[`nodejs/`](nodejs/) files are numbered and sequential.
+Every note in this repository follows a consistent architectural standard:
+- **Depth & Progression**: Fundamentals → Production-ready configuration → Real-world industry practices.
+- **Minimalist Aesthetic**: Clean headers and minimal bolding for high-signal readability.
+- **Active Recall**: Every chapter concludes with a formal **Q&A** section designed for knowledge verification.
 
 ---
 
-## Legend (question-bank files)
+## Agentic Engineering
 
-- 🟢 Basic — must answer confidently
-- 🟡 Intermediate — expected at 3+ years
-- 🔴 Advanced — differentiates you from the crowd
-- 💡 Scenario / Tricky — real interview favorites
+This repository is optimized for use with AI agents (Claude Code, Gemini CLI).
 
----
-
-## Scope notes
-
-- **Backend-focused.** Frontend content is a safety net for backend devs, not deep frontend prep. The [`6. Frontend.md`](interview-prep/3-years-experience/6.%20Frontend.md) file serves both audiences: full coverage for frontend-heavy roles (JS fundamentals, React, HTML/CSS, Node.js basics) and a backend-focused quick-revision path table at the end.
-- **Calibration** reflects a 3+ yr backend engineer. Level up or down for your own context.
+- **Unified Rules**: Standards for creation and review are located in `.gemini/rules/standards.md`.
+- **Automation Skills**: Automated tools for note reviewing and scaffolding are available in `.gemini/skills/`.
+- **Project Mandates**: Root-level `CLAUDE.md` and `GEMINI.md` ensure consistent agent behavior across all sessions.
