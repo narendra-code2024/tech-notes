@@ -27,6 +27,6 @@ Every note in this repository follows a consistent architectural standard:
 
 This repository is optimized for use with AI agents (Claude Code, Antigravity).
 
-- **Unified Rules**: Standards for creation and review are located in `.gemini/rules/standards.md`.
-- **Automation Skills**: Automated tools for note reviewing and scaffolding are available in `.gemini/skills/`.
-- **Project Mandates**: Root-level `CLAUDE.md` and `ANTIGRAVITY.md` ensure consistent agent behavior across all sessions.
+- **Unified Rules**: Standards for creation and review are located in `.agents/rules/standards.md`.
+- **Automation Skills**: Automated tools for note reviewing and scaffolding are available in `.agents/skills/`.
+- **Project Mandates**: Root-level `CLAUDE.md` and `AGENTS.md` ensure consistent agent behavior across all sessions.

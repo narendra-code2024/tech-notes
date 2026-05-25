@@ -5,7 +5,7 @@ description: Audits a technical note against the project's official Technical No
 
 # Note Reviewer Skill
 
-When invoked on a file, perform a rigorous audit based on `@.gemini\rules\standards.md`.
+When invoked on a file, perform a rigorous audit based on `@.agents\rules\standards.md`.
 
 ## Audit Checklist
 1. **Structural Integrity**:

@@ -5,7 +5,7 @@ description: Synthesizes raw lecture notes, video subtitles, reading materials, 
 
 # Note Architect Skill
 
-When asked to create a new note from any source (topic name, lecture notes, subtitles, or docs), follow the mandatory structural flow defined in `@.gemini\rules\standards.md`.
+When asked to create a new note from any source (topic name, lecture notes, subtitles, or docs), follow the mandatory structural flow defined in `@.agents\rules\standards.md`.
 
 ## Synthesis Process
 1. **Research (If needed)**: If only a topic name is provided, use **web search** and **official documentation** (e.g., Spring.io, Nodejs.org) to gather the latest technical details.

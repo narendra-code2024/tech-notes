@@ -4,7 +4,7 @@ This repository contains high-fidelity technical handbooks. All edits and new no
 
 ## Mandatory Rules
 All work must comply with the canonical standards:
-- **Project Standards**: @.gemini\rules\standards.md
+- **Project Standards**: @.agents\rules\standards.md
 
 ## Core Behavioral Mandate
 - **Strict Explicit Modification**: NEVER remove, edit, or create any content or sections unless explicitly instructed. Refactoring or "cleaning up" unassigned text is strictly forbidden.
