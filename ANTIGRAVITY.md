@@ -13,5 +13,5 @@ All work must comply with the canonical standards:
 ## Technical Highlights
 - **Minimal Bolding**: Only bold foundational terms once per section.
 - **Colon Separator**: Use `:` for all definitions.
-- **Section Integrity**: `---` between `##` major sections only.
+- **Section Integrity**: `---` between `##` major sections only. Files must start with an empty line followed by `---`.
 - **No Thin Sections**: Flatten sections with minimal logical weight.
