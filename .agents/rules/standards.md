@@ -19,7 +19,7 @@ Canonical declarative standards for all technical notes in this vault. These rul
 - **Definition Separator**: Always use a colon (`:`) between a bolded term and its definition.
 - **Syntactic Context**: Reserved exclusively for `**Term**: Description` pairs. Do not use the colon separator for narrative emphasis or general punctuation within a sentence.
 - **Code**: Tag language explicitly (e.g., ` ```java `). Prefer concise, short variable names (e.g., `a`, `b`, `name`, `val`) to maintain high density; avoid verbose names (e.g., `autoBoxedInteger`). Keep descriptive class names and meaningful literals (e.g., `"Alice"`) to preserve context.
-- **Table Pipes**: Use the HTML entity `&#124;` for any pipe characters (`|`) inside table cells to prevent rendering breaks.
+- **Table Pipes & Formatting**: Use the HTML entity `&#124;` for any pipe characters (`|`) inside table cells to prevent rendering breaks. **Always pretty-print and vertically align the columns and pipe characters (`|`)** of markdown tables using padding spaces to ensure raw source-code readability.
 - **Tone & Terminology**: Maintain a direct, professional tone. NEVER use informal filler or words like "gotcha," "nuance," "pitfall," or "deep-dive." Use "Note:" or "Special Case(s):" instead.
 
 ## 4. Cross-Referencing & Callouts

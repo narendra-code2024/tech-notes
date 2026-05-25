@@ -19,7 +19,7 @@ When invoked on a file, perform a rigorous audit based on `@.agents\rules\standa
    - **Definition Separators**: Ensure all definitions use a colon (`:`) after the bolded term, not a dash (`—`) or hyphen (`-`).
    - **Code Blocks**: Ensure all code blocks have language tags. Flag verbose names (prefer `a`, `name`). Do not flag meaningful literals (e.g., `"Alice"`) or class names.
    - **Tone Check**: Flag informal words like "gotcha," "pitfall," or "nuance."
-   - **Table Check**: Ensure pipes inside cells use `&#124;`.
+   - **Table Check**: Ensure pipes inside cells use `&#124;` and **all markdown tables are pretty-printed and vertically aligned** on their pipe (`|`) characters.
 
 3. **Required Sections**:
    - Ensure the note ends with a numbered `## Q&A` section (answers must be flush left).
