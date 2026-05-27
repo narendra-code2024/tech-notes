@@ -5,10 +5,13 @@ Canonical declarative standards for all technical notes in this vault. These rul
 
 ## 1. Content Progression
 - **Mandatory Flow**: Fundamentals → Production-ready configuration → Real-world industry practices.
+- **Pedagogical Integrity**: Early chapters must not use or reference advanced language features introduced in later chapters (e.g., Chapter 6 cannot use records, sealed classes, or pattern matching, which belong in Chapters 12, 16, and 30). Keep the cognitive load strictly appropriate for the note's level.
+- **Conciseness & Information Density**: Sentences must be highly optimized, punchy, and direct. Eliminate wordiness, passive voice, and redundant descriptions. Keep explanations compact while retaining full technical depth.
 
 ## 2. Structural Requirements
 - **Separators**: Use `---` only between major `##` sections. Never use `---` to separate `###` subsections.
 - **Headings**: `##` (major), `###` (minor). Avoid deeper nesting. **Never use numbers in headings** (e.g., use `## Setup`, not `## 1. Setup`).
+- **Code Example Quality**: Pitfall demonstrations (like fall-through or dangling-else) must clearly contrast the **Accidental Bug** and **Intentional Use Case** using a realistic, simple, and factually accurate scenario (e.g., using correct calendar weeks or user roles, not arbitrary math or placeholders).
 - **Anti-patterns to avoid**:
   - **Echo-headings**: No `## What is <Title>?`. Merge intro into the top of the file (no header).
   - **Thin sections**: Avoid sections with minimal content that don't justify a standalone heading. A section must have significant "logical weight" to exist independently. If the information is brief, **logically flatten** it into bolded bullets under a relevant parent section or consolidate it with other related content.
@@ -25,7 +28,7 @@ Canonical declarative standards for all technical notes in this vault. These rul
 ## 4. Cross-Referencing & Callouts
 - **Links**: Use standard markdown `[Text](<File.md>)`. Wiki-links (`[[]]`) are strictly forbidden.
 - **Economy**: Max 1 link per target per section. Links must be load-bearing.
-- **Callouts (`> `)**: Reserved exclusively for Notes, Cautions, and Cross-references. Do not use for general definitions. If a callout contains multiple unrelated points or distinct scenarios, use a bulleted list for readability.
+- **Callouts (`> `)**: Reserved exclusively for Notes, Cautions, and Cross-references. Every note, caution, or warning block must start with the blockquote symbol (`> `) to render properly as an Obsidian callout (e.g., `> **Note**: Description`, never a bare `**Note**:`). If a callout contains multiple unrelated points or distinct scenarios, use a bulleted list for readability.
 
 ## 5. Standard End-of-File Sections
 - **Q&A**: Must use sequential numbering (1., 2.), a formal bold question, and a 1-3 sentence answer. **Answers must not be indented** (flush left).

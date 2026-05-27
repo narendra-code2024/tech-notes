@@ -7,7 +7,7 @@ All work must comply with the canonical standards:
 - **Project Standards**: @.agents\rules\standards.md
 
 ## Core Behavioral Mandate
-- **Strict Explicit Modification**: NEVER remove, edit, or create any content or sections unless explicitly instructed. Refactoring or "cleaning up" unassigned text is strictly forbidden.
+- **Strict Explicit Modification**: Do not modify unassigned sections without instruction. However, when asked to review or optimize a note, proactive refactoring is permitted to align the text pedagogically, compact verbose phrasing, and correct logical inconsistencies in code examples according to the Technical Note Standards.
 - **No Heading Numbering**: Do not include numbers in any headers.
 
 ## Technical Highlights
