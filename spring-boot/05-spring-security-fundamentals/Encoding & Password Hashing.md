@@ -1,6 +1,3 @@
-
----
-
 ## Encoding
 
 - 1 byte = 8 bits, representing values **0–255** (decimal) or **00–FF** (hex)
@@ -19,7 +16,7 @@ rawBytes.toString('base64'); // → "OvGcBLI..."    (~44 chars)
 
 Encoding changes the representation, **not** the data. The underlying entropy is still 32 bytes = 256 bits.
 
-> Encoding is **not encryption** — it's just text representation. Anyone can decode it; there's no secret key.
+> Encoding is **not encryption**: it's just text representation. Anyone can decode it; there's no secret key.
 
 ### Hex Encoding
 
@@ -171,8 +168,8 @@ Java `char` = 2 bytes is an **internal memory representation** detail. The hex s
 
 Hashing vs encryption — important distinction first:
 
-- **Encryption (two-way)** — can be **encrypted** and **decrypted** with a key. Used for data transmission (HTTPS/TLS), file protection. Examples: AES, RSA.
-- **Hashing (one-way)** — **cannot be reversed**. Used for password storage, data integrity. Examples: bcrypt, SHA256, Argon2.
+- **Encryption (two-way)**: can be **encrypted** and **decrypted** with a key. Used for data transmission (HTTPS/TLS), file protection. Examples: AES, RSA.
+- **Hashing (one-way)**: **cannot be reversed**. Used for password storage, data integrity. Examples: bcrypt, SHA256, Argon2.
 
 > **Critical rule:** Passwords must be hashed, NEVER encrypted. If passwords are encrypted, whoever has the key can decrypt all of them.
 
@@ -208,7 +205,7 @@ The hash structure above embeds two configurable parameters: a per-hash **salt**
 ### Salt
 
 - A **random value** generated automatically by bcrypt
-- **Unique per hash** — even for the same password
+- **Unique per hash**: even for the same password
 - **Stored inside the hash** itself (not separately)
 
 Without salt, `Password@123` always hashes to the same output, so an attacker can pre-compute hashes (rainbow table attack). With salt:
@@ -289,15 +286,15 @@ Hash::check($enteredPassword, $storedHash);
 
 ## bcrypt vs SHA256 vs Argon2
 
-|Feature|SHA256|bcrypt|Argon2|
-|---|---|---|---|
-|Speed|Very fast|Intentionally slow|Intentionally slow|
-|Built-in salt|No|Yes|Yes|
-|Configurable cost|No|Yes|Yes|
-|Memory hard|No|No|Yes|
-|GPU attack resistant|No|Partial|Strong|
-|Safe for passwords|❌ Never|✓|✓|
-|Status|Wrong tool for the job|Legacy, still secure|Current recommendation|
+| Feature              | SHA256                 | bcrypt               | Argon2                 |
+|----------------------|------------------------|----------------------|------------------------|
+| Speed                | Very fast              | Intentionally slow   | Intentionally slow     |
+| Built-in salt        | No                     | Yes                  | Yes                    |
+| Configurable cost    | No                     | Yes                  | Yes                    |
+| Memory hard          | No                     | No                   | Yes                    |
+| GPU attack resistant | No                     | Partial              | Strong                 |
+| Safe for passwords   | No                     | Yes                  | Yes                    |
+| Status               | Wrong tool for the job | Legacy, still secure | Current recommendation |
 
 > **Never use plain SHA256 for password storage.** bcrypt is still secure and widely deployed; Argon2 is the modern strongest choice (memory-hard).
 
@@ -307,12 +304,10 @@ Hash::check($enteredPassword, $storedHash);
 
 The attacker gets only the bcrypt hashes — `$2a$10$gOBiDbhQSYpO1zpWUdQqS.JjdH2QfFwBXzc8u/Z30S2DU3/mmvjZu`. They **cannot** reverse hashes back to plaintext, and they **cannot** use rainbow tables (each hash has a unique salt). The only avenue is brute-force: guess → hash → compare → repeat.
 
-**What slows them down:**
-
-- **bcrypt's intentional slowness** — each guess takes ~100ms at cost=10
-- **Unique salt per hash** — must attack each user's hash individually (no shared rainbow tables)
-- **High cost factor** — every +1 doubles attacker work
-- **Strong user passwords** — harder to guess in the first place
+**What slows them down**: **bcrypt's intentional slowness**: each guess takes ~100ms at cost=10
+- **Unique salt per hash**: must attack each user's hash individually (no shared rainbow tables)
+- **High cost factor**: every +1 doubles attacker work
+- **Strong user passwords**: harder to guess in the first place
 
 **Attacker math** at cost=10 (~10–100 guesses/sec/hash on typical hardware):
 
@@ -333,3 +328,5 @@ The attacker gets only the bcrypt hashes — `$2a$10$gOBiDbhQSYpO1zpWUdQqS.JjdH2
 - Never use MD5 or plain SHA for passwords
 
 > JWT-side concerns (token transport, HttpOnly vs localStorage, browser-vs-microservice split) live in [5.6 Understanding JWT](<5.6. Understanding JWT.md>) and [5.7 JWT Implementation](<5.7. JWT Implementation.md>) — this appendix focuses on byte-level fundamentals.
+
+

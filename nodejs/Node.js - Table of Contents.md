@@ -1,6 +1,3 @@
-
----
-
 ## Part 1: Node.js Fundamentals
 
 ### 1. Introduction to Node.js
