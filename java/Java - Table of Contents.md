@@ -284,7 +284,7 @@
 
 ## Phase 5: Modern Java (Java 8+)
 
-### 23. Functional Programming (Java 8+)
+### 23. Functional Programming
 
 - Functional Interfaces
     - Built-in Interfaces (java.util.function)
@@ -294,7 +294,7 @@
 - Method References
 - Effectively Final Variables
 
-### 24. Streams API (Java 8+)
+### 24. Streams API
 
 - Creating Streams
 - Intermediate Operations
