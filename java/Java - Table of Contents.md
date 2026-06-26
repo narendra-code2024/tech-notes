@@ -2,29 +2,17 @@
 
 ### 1. Introduction to Java
 
-- Overview
 - Java Editions
-    - Java SE
-    - Jakarta EE
-    - Java ME
+    - Java SE (Standard Edition)
+    - Jakarta EE (Enterprise Edition)
+    - Java ME (Micro Edition)
 - Java Features
-    - Object-Oriented
-    - Platform Independent
-    - Secured
-    - Multithreaded
-    - Compiled & Interpreted
 
 ### 2. JDK, JRE & JVM
 
-- JDK vs JRE vs JVM
-    - Compilation Flow
-    - "Write Once, Run Anywhere"
 - JAR Files
 - Classpath
 - JVM Architecture
-    - ClassLoader Subsystem
-    - Runtime Data Areas
-    - Execution Engine
 
 ### 3. Java Basics
 
@@ -33,6 +21,8 @@
     - Command-Line Arguments
 - Statements, Expressions & Blocks
 - Identifiers & Keywords
+    - Identifiers
+    - Keywords
 - Comments
 - Packages & Imports
     - Common Standard Packages
@@ -40,7 +30,6 @@
 ### 4. Variables & Data Types
 
 - Variables
-    - Declaration and Initialization
     - Scope and Lifetime
     - `final` Keyword
     - `var` Keyword (Java 10+)
@@ -86,9 +75,6 @@
 
 - Reading Input
     - `Scanner` Class
-        - Common Scanner Methods
-        - Scanner Newline Trap
-        - Parsing Input with Wrapper Classes
     - `Console` Class
 - Printing Output
     - `PrintStream` Class
@@ -101,15 +87,13 @@
 
 ### 8. Arrays
 
-- Declaration & Initialization
 - Multi-Dimensional Arrays
 - `Arrays` Utility Class
 - Array Copying
-- Varargs
+- Varargs (Variable Arguments)
 
 ### 9. Strings
 
-- String Basics
 - String Immutability
 - String Constant Pool
 - String Comparison
@@ -117,14 +101,15 @@
 - String Concatenation Internals
 - String vs StringBuilder vs StringBuffer
     - `StringBuilder` Methods
-- Text Blocks (Java 15+)
+- Text Blocks
 
 ### 10. Numbers, Math & Random
 
 - `java.lang.Number`
+    - Subclasses of `java.lang.Number`
 - `java.lang.Math`
-- `BigInteger`
-- `BigDecimal`
+- `java.math.BigInteger`
+- `java.math.BigDecimal`
 - Number Parsing & Formatting
 - Random Number Generation
 
@@ -150,9 +135,9 @@
 
 ### 12. OOP Foundations
 
-- Class and Object
 - Object Creation
 - Attributes
+    - Compile-Time vs Runtime Constants
 - Methods
     - Instance vs Static Methods
 - Blocks
@@ -167,19 +152,23 @@
 
 ### 13. Encapsulation & Access Control
 
-- Encapsulation Basics
 - Access Modifiers
+    - private
+    - protected
 - Getters and Setters
+- final Keyword
 - Mutable vs Immutable
+    - Mutable
+    - Immutable
 - Creating an Immutable Class
 - Singleton
 
 ### 14. Inheritance & Relationships
 
-- Inheritance Basics
 - `super` Keyword
     - Call parent constructor
     - Access parent members
+- final in Inheritance
 - Types of Inheritance
 - Generalization and Specialization
 - HAS-A
@@ -212,8 +201,9 @@
 - Local Inner Class
 - Anonymous Inner Class
     - Anonymous Class vs Lambda
-- Nested Interfaces
-- Nested Abstract Classes
+- Nested Interfaces and Abstract Classes
+    - Nested Interfaces
+    - Nested Abstract Classes
 
 ### 18. Annotations
 
@@ -223,23 +213,21 @@
 
 ### 19. Object Class
 
-- Object Methods
 - `toString()`
 - `equals()`
-    - `==` vs `.equals()`
 - `hashCode()`
 
 ### 20. Enums
 
-- Declaration & Basics
-- Built-in methods (`values()`, `valueOf()`, `name()`, `ordinal()`)
-- Enums with Fields, Constructors, and Methods
-- Abstract Methods per Constant (Strategy Pattern)
-- Implementing Interfaces
-- Enums in `switch` (including pattern matching in Java 21+)
-- `EnumSet` and `EnumMap` (high-performance collections)
-- Enum as Singleton (Effective Java pattern)
-- Real-World Patterns (state, roles/permissions, feature flags, log levels)
+- Syntax & Built-in Methods
+- Fields, Constructors, and Methods
+- Constant-Specific Behavior
+- Enums in `switch`
+- `EnumSet` and `EnumMap`
+- Singleton Pattern
+- Real-World Patterns
+    - State Machine
+    - Roles / Permissions
 
 ---
 
@@ -249,33 +237,47 @@
 
 - Generic Class
 - Generic Method
-- Bounded Type Parameters (upper bound `extends`, multiple bounds with `&`)
-- Wildcards (`?`, `? extends T`, `? super T`)
-    - PECS, Producer Extends, Consumer Super
-- Wildcards vs Bounded Type Parameters
-- Type Erasure
-- Arrays vs Generics (Covariance vs Invariance)
-    - Generic Array Creation Restriction
-    - Generic Varargs and `@SafeVarargs`
 - Generic Interface
-- Generic Constructor
+- Bounded Type Parameters
+    - Upper bound (`extends`)
+    - Multiple bounds (`&`)
+- Wildcards (`?`)
+    - Unbounded (`?`)
+    - Upper bound (`? extends T`, producer)
+    - Lower bound (`? super T`, consumer)
+    - PECS (Producer Extends, Consumer Super)
+    - Wildcard vs named type parameter
+- Type Erasure
+- Arrays vs Generics
+    - Generic array creation
+    - Generic varargs and `@SafeVarargs`
 
 ### 22. Collection Framework
 
-- Hierarchy Overview
-- List (`ArrayList`, `LinkedList`, `Vector`, `Stack`)
-- Set (`HashSet`, `LinkedHashSet`, `TreeSet`)
-- Queue & Deque (`PriorityQueue`, `ArrayDeque`)
-- Map (`HashMap`, `LinkedHashMap`, `TreeMap`, `Hashtable`, `ConcurrentHashMap`)
-    - `HashMap` Internal Working
-- Iteration Techniques (`Iterator`, for-each, `forEach()`, `ListIterator`)
-- `Collections` Utility Class (sort, reverse, shuffle, fill, binarySearch)
-- `Comparable` vs `Comparator`
-- Arrays ↔ Collections Conversions
-- Bulk Operations (`addAll`, `removeAll`, `retainAll`, `removeIf`)
+- List (Ordered, Duplicates, Index-based)
+    - Key Methods
+- Set (No Duplicates)
+    - Key Methods
+- Queue & Deque
+    - Queue Operations (FIFO)
+    - Deque
+    - PriorityQueue
+- Map (Key-Value, Unique Keys)
+    - HashMap Internals
+    - Key Methods
+    - Iterating a Map
+- Iteration
+    - Under the Hood
+    - Iterator (Safe Removal)
+    - forEach (Java 8+)
+    - ListIterator (Bidirectional, List Only)
+- Collections Utility Class
+- Comparable vs Comparator
+- Arrays and Collections Conversions
+- Bulk Operations
 - Fail-Fast vs Fail-Safe Iterators
-- Thread-Safe Collections (`ConcurrentHashMap`, `CopyOnWriteArrayList`, `BlockingQueue`)
-- Big-O Cheat Sheet
+- Thread-Safe Collections
+- Big-O Complexity
 - Quick Decision Guide
 
 ---
@@ -285,26 +287,28 @@
 ### 23. Functional Programming (Java 8+)
 
 - Functional Interfaces
-    - Built-in (`Predicate`, `Function`, `Consumer`, `Supplier`, Bi/Unary/Binary variants)
-    - Chaining Functional Interfaces
-    - Primitive Specialized Functional Interfaces (`IntPredicate`, `LongFunction`, etc.)
+    - Built-in Interfaces (java.util.function)
+    - Chaining
+    - Primitive Specializations
 - Lambda Expressions
-- Method References (static, instance-specific, instance-any, constructor)
+- Method References
 - Effectively Final Variables
 
 ### 24. Streams API (Java 8+)
 
-- Creating Streams (`stream()`, `of()`, `generate()`, `iterate()`)
-- Intermediate Operations (`filter`, `map`, `flatMap`, `sorted`, `distinct`, `limit`, `skip`)
-- Terminal Operations (`collect`, `forEach`, `reduce`, `count`, `findFirst`, `anyMatch`)
-- Optional (Companion to Streams)
-- Primitive Streams (`IntStream`, `LongStream`, `DoubleStream`)
+- Creating Streams
+- Intermediate Operations
+- Terminal Operations
+    - collect
+    - reduce
+    - Others
+- Optional
+- Primitive Streams
 - Parallel Streams
-- Common Stream Patterns
-- Stream Pipeline Order Matters
+- Common Patterns
 - Short-Circuiting Operations
 - Stateless vs Stateful Operations
-- Stream Best Practices
+- Best Practices
 
 ---
 
@@ -312,61 +316,90 @@
 
 ### 25. Multithreading & Concurrency
 
-- Creating Threads (`Thread`, `Runnable`, `Callable`)
-- Thread Lifecycle (NEW, RUNNABLE, BLOCKED, WAITING, TIMED_WAITING, TERMINATED)
-- Essential Thread Methods (`start`, `sleep`, `join`, `interrupt`, `yield`)
+- Creating Threads
+    - Extend Thread
+    - Implement Runnable (preferred)
+    - Implement Callable (returns a result)
+    - Runnable vs Callable
+- Thread Lifecycle
+- Essential Thread Methods
     - Daemon vs User Threads
-- Synchronization, `synchronized` Keyword
-- `volatile` Keyword
-- `wait()`, `notify()`, `notifyAll()`
-- Locks (`ReentrantLock`, `ReadWriteLock`)
-- Atomic Classes (`AtomicInteger`, `LongAdder`, `LongAccumulator`)
-- Synchronizers (`CountDownLatch`, `CyclicBarrier`, `Semaphore`)
+- Synchronization
+    - synchronized
+- volatile
+    - Visibility and the per-core cache
+- wait(), notify(), notifyAll()
+- Locks (java.util.concurrent.locks)
+    - ReentrantLock
+    - ReadWriteLock
+    - synchronized vs Lock
+- Atomic Classes (java.util.concurrent.atomic)
+    - High-contention counters: LongAdder
+- Synchronizers (java.util.concurrent)
+    - CountDownLatch (wait for N tasks, one-shot)
+    - CyclicBarrier (sync N threads at a point, reusable)
+    - Semaphore (cap concurrent access)
 - ExecutorService (Thread Pools)
-    - `ThreadPoolExecutor` (production-grade)
-- `CompletableFuture` (Java 8+)
+    - Submitting tasks
+    - Shutting down
+    - ThreadPoolExecutor (production control)
+- CompletableFuture (Java 8+)
+    - Combining
+    - Exception handling
+    - join() vs get(), and async variants
 - Virtual Threads (Java 21+)
 - Concurrent Collections
-- Common Concurrency Problems (Deadlock, Livelock, Starvation, Race Condition)
+- Common Concurrency Problems
+    - Deadlock
+    - Livelock, Starvation, Race Condition
 
 ### 26. File Handling
 
-- I/O Streams (byte vs character)
+- I/O Streams
 - Reading & Writing Files
-    - Character Streams (`FileReader`, `FileWriter`, `PrintWriter`)
-    - Byte Streams (`FileInputStream`, `FileOutputStream`)
-- Buffered Streams (`BufferedReader`, `BufferedWriter`)
-- `java.nio.file` (Modern File API, Java 7+)
-    - `Path` and `Paths`
-    - `Files` Utility Class (`readString`, `readAllLines`, `write`, `copy`, `move`, `delete`)
-    - Stream-based File Reading (`Files.lines`, `Files.walk`)
-    - Modern Buffered Reading/Writing (`Files.newBufferedReader`, `Files.newBufferedWriter`)
-- `File` class (Legacy, `java.io`)
-- `try-with-resources` for I/O
-- `InputStreamReader` / `OutputStreamWriter` (Bridge)
-- Common I/O Patterns
-- `java.io.File` vs `java.nio.file`
+    - Character Streams (text)
+    - Byte Streams (binary)
+    - PrintWriter (formatted text)
+- Buffered Streams
+- Bridge: InputStreamReader / OutputStreamWriter
+- java.nio.file (Modern File API, Java 7+)
+    - Path
+    - Files utility class
+    - Copying streams
+    - Stream-based reading (Java 8+)
+    - Buffered reading/writing
+- File class (Legacy, java.io)
+- try-with-resources for I/O
+- java.io.File vs java.nio.file
 
 ### 27. Serialization
 
-- How to Serialize (`Serializable`, `ObjectOutputStream`, `ObjectInputStream`)
-- `serialVersionUID`
-- `transient` Keyword (excluding fields from serialization)
-- `static` Fields and Serialization
+- How to Serialize
+- serialVersionUID
+- transient Keyword
+- static Fields and Serialization
 - Inheritance and Serialization
-- Custom Serialization (`writeObject()`, `readObject()`)
-- `Externalizable` Interface
-- Serialization and Singleton (`readResolve`, enum singleton)
-- Modern Alternatives (JSON, Protobuf, Avro, Kryo)
+    - Serializable parent
+    - Non-serializable parent
+- Custom Serialization (writeObject / readObject)
+- Externalizable Interface
+- Serialization and Singleton
+- Security
+- Modern Alternatives
 
 ### 28. Java Networking
 
-- `java.net` Package Overview
-- `InetAddress`
-- TCP Sockets (`Socket`, `ServerSocket`)
-- UDP Sockets (`DatagramSocket`, `DatagramPacket`)
-- `URL` and `HttpURLConnection` (legacy)
-- Modern HTTP Client (Java 11+), `java.net.http.HttpClient`
+- TCP vs UDP
+- InetAddress
+- TCP Sockets
+    - Server
+    - Client
+- UDP Sockets
+    - Sender
+    - Receiver
+- HTTP Clients
+    - HttpClient (Java 11+)
+    - HttpURLConnection (legacy)
 
 ---
 
@@ -374,47 +407,30 @@
 
 ### 29. Java Modern Features
 
-- Local Variable Type Inference (`var`)
-- Records
-- Pattern Matching for `instanceof`
-- Sealed Classes
-- Virtual Threads
-- Structured Concurrency
-- Text Blocks
-- Switch Expressions
+- `var`, Local Variable Type Inference (Java 10)
+- Switch Expressions (Java 14)
+- Text Blocks (Java 15)
+- Records (Java 16)
+- Pattern Matching (Java 16, `instanceof`; Java 21, `switch`)
+- Sealed Classes (Java 17)
+- Virtual Threads (Java 21)
+- Structured Concurrency (Java 21, Preview)
 
 ### 30. JVM Architecture & Memory Model
 
 - ClassLoader Subsystem
-    - Loading (Bootstrap, Extension/Platform, Application/System)
-    - Linking (Verification, Preparation, Resolution)
+    - Loading
+    - Linking
     - Initialization
-    - Parent-first delegation model
-- Runtime Data Areas (Memory)
-    - Method Area / Metaspace (class metadata, static vars)
+- Runtime Data Areas
+    - Method Area (Metaspace, Java 8+)
     - Heap
-        - Young Generation (Eden, Survivor S0/S1)
-        - Old Generation
-        - String Constant Pool (in Heap since Java 7)
-    - Stack (per thread, local vars, frames)
-    - PC Register (per thread)
-    - Native Method Stack (per thread)
+    - Stack (per thread)
+    - PC Register and Native Method Stack (per thread)
+    - Memory summary
 - Execution Engine
-    - Interpreter vs JIT
-    - Tiered Compilation (C1 + C2)
+    - Interpreter
+    - JIT Compiler
     - Garbage Collector
-        - Reachability analysis from GC Roots
-        - GC types: Serial, Parallel, G1 (default Java 9+), ZGC (Java 15+)
-        - Minor GC vs Major/Full GC
-        - Stop-The-World pauses
-        - `System.gc()` is a hint, `finalize()` deprecated
-- Object Creation Flow (class load → heap alloc → default init → constructor → stack reference)
-- String Memory (literal pool vs `new String(...)`)
-- JVM Flags (`-Xms`, `-Xmx`, `-Xss`, GC selection, heap dump on OOM)
-- Technical Notes
-    - Stack vs Heap confusion
-    - PermGen vs Metaspace
-    - `OutOfMemoryError` variants (heap, metaspace, native thread, GC overhead)
-    - JIT warmup
-    - Memory leak causes
-
+- Object Creation Flow
+- Common JVM Flags
