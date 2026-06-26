@@ -372,7 +372,7 @@
 
 ## Phase 7: Advanced Reference
 
-### 29. Java Modern Features (10–21+)
+### 29. Java Modern Features
 
 - Local Variable Type Inference (`var`)
 - Records
